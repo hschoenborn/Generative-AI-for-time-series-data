@@ -1,0 +1,6 @@
+{'report_type': 'DiagnosticReport', 'generated_date': '2024-04-17', 'sdmetrics_version': '0.13.0', 'num_rows_real_data': 5045, 'num_rows_synthetic_data': 5024, 'generation_time': 0.019938230514526367}
+{'report_type': 'QualityReport', 'generated_date': '2024-04-17', 'sdmetrics_version': '0.13.0', 'num_rows_real_data': 5045, 'num_rows_synthetic_data': 5024, 'generation_time': 17.853924989700317}
+Real data path: input\filtered_new_data.csv
+Synthetic data path: output\cs_synthetic_data_r_5000_b_32_m_csabi_ctgan_e_5000_i_filtered_new_data_14042024_181147_14042024_194309.csv
+Diagnostic score: 100.0%
+Quality score: 75.73763884276438%

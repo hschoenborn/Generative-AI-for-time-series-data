@@ -1,0 +1,93 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyc
+*.pyo
+*.pyz
+*.pywz
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+# Jython
+*.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# IDE - Eclipse
+.project
+.classpath
+.pydevproject
+.factorypath
+
+# IDE - PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+/.idea
+/.vscode
+
+# Misc
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Own files
+notes.txt
