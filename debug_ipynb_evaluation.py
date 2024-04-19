@@ -27,24 +27,40 @@ parser.add_argument('--losses', '-l', metavar="[FILENAME]", type=str, required=T
 
 args = parser.parse_args()
 
-# Load real and synthetic data
+# ---Create folders
+# Create evaluation folder if it does not exist
+evaluation_folder = 'evaluation'
+os.makedirs(evaluation_folder, exist_ok=True)
+
+# Create a html folder if it does not exist (subfolder)
+webpages_folder = 'html'
+os.makedirs(os.path.join(evaluation_folder, webpages_folder), exist_ok=True)
+html_file_path = os.path.join(evaluation_folder, webpages_folder)
+
+# Create a jpg folder if it does not exist (subfolder)
+images_folder = 'images'
+os.makedirs(os.path.join(evaluation_folder, images_folder), exist_ok=True)
+images_file_path = os.path.join(evaluation_folder, images_folder)
+
+
+# ---Load real and synthetic data
 real_data_folder = 'input'
 real_data_file_name = args.input
 real_data_file_name += '.csv'
 real_data_file_path = os.path.join(real_data_folder, real_data_file_name)
 real_data = pd.read_csv(real_data_file_path)
 
-synth_data_folder = 'output'
-synth_data_file_name = args.output
-synth_data_file_name += '.csv'
-synth_data_file_path = os.path.join(synth_data_folder, synth_data_file_name)
-synthetic_data = pd.read_csv(synth_data_file_path)
+synthetic_data_folder = 'output'
+synthetic_data_file_name = args.output
+synthetic_data_file_name += '.csv'
+synthetic_data_file_path = os.path.join(synthetic_data_folder, synthetic_data_file_name)
+synthetic_data = pd.read_csv(synthetic_data_file_path)
 
-# Load logs of losses
-losses_data_folder = 'logs'
+# ---Load logs of losses
+logs_folder = 'logs'
 model_log_file_name = args.losses
 model_log_file_name += '.csv'
-loss_values_path  = os.path.join(losses_data_folder, model_log_file_name)
+loss_values_path  = os.path.join(logs_folder, model_log_file_name)
 loss_values = pd.read_csv(loss_values_path)
 
 # Create evaluation folder if it does not exist
@@ -54,8 +70,17 @@ os.makedirs(evaluation_folder, exist_ok=True)
 # Create debugging folder for visualisations if it does not exist
 debug_visualisation_name = 'debug'
 os.makedirs(os.path.join(evaluation_folder, debug_visualisation_name), exist_ok=True)
-# Set visualisation folder path
 debug_folder = os.path.join(evaluation_folder, debug_visualisation_name)
+
+# Create a html folder if it does not exist (subfolder)
+webpages_folder = 'html'
+os.makedirs(os.path.join(debug_folder, webpages_folder), exist_ok=True)
+html_file_path = os.path.join(debug_folder, webpages_folder)
+
+# Create a jpg folder if it does not exist (subfolder)
+images_folder = 'images'
+os.makedirs(os.path.join(debug_folder, images_folder), exist_ok=True)
+images_file_path = os.path.join(debug_folder, images_folder)
 
 #---
 # Rename columns
