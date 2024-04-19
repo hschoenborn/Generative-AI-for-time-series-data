@@ -53,3 +53,71 @@
 	Model was  trained using CUDA
 	Training on 2 epochs
 	Input file path: input\filtered_new_data.csv
+--- CTGAN model training started at: 20240419_103301
+	Model name: ctgan_medium_input_ep20_mdl1.pkl
+	Model path: model\ctgan_medium_input_ep20_mdl1.pkl
+--- CTGAN model training started at: 20240419_103301
+	Model name: ctgan_medium_input_ep20_mdl1.pkl
+	Model path: model\ctgan_medium_input_ep20_mdl1.pkl
+	Model was  trained using CUDA
+	Training on 20 epochs
+	Input file path: input\medium_input.csv
+--- CTGAN model training started at: 20240419_103301
+	Model name: ctgan_medium_input_ep20_mdl1.pkl
+	Model path: model\ctgan_medium_input_ep20_mdl1.pkl
+	Model was  trained using CUDA
+	Training on 20 epochs
+	Input file path: input\medium_input.csv
+--- CTGAN model training started at: 20240419_103301
+	Model name: ctgan_medium_input_ep20_mdl1.pkl
+	Model path: model\ctgan_medium_input_ep20_mdl1.pkl
+	Model was  trained using CUDA
+	Training on 20 epochs
+	Input file path: input\medium_input.csv
+--- CTGAN model training started at: 20240419_111435
+	Model name: ctgan_medium_input_ep2_mdl1.pkl
+	Model path: model\ctgan_medium_input_ep2_mdl1.pkl
+	Model was  trained using CUDA
+	Training on 2 epochs
+	Input file path: input\medium_input.csv
+--- CTGAN model training started at: 20240419_113510
+	Model name: mdl1_ctgan_i_medium_input_ep2.pkl
+	Model path: model\mdl1_ctgan_i_medium_input_ep2.pkl
+	Model was  trained using CUDA
+	Training on 2 epochs
+	Input file path: input\filtered_new_data.csv
+--- CTGAN model training started at: 20240419_114021
+	Model name: mdl1_ctgan_i_medium_input_ep1.pkl
+	Model path: model\mdl1_ctgan_i_medium_input_ep1.pkl
+	Model was  trained using CUDA
+	Training on 1 epochs
+	Input file path: input\filtered_new_data.csv
+--- CTGAN model training started at: 20240419_114215
+	Model name: mdl2_ctgan_i_medium_input_ep1.pkl
+	Model path: model\mdl2_ctgan_i_medium_input_ep1.pkl
+	Model was  trained using CUDA
+	Training on 1 epochs
+	Input file path: input\filtered_new_data.csv
+--- CTGAN model training started at: 20240419_114533
+	Model name: mdl3_ctgan_i_medium_input_ep1.pkl
+	Model path: model\mdl3_ctgan_i_medium_input_ep1.pkl
+	Model was  trained using CUDA
+	Training on 1 epochs
+	Input file path: input\filtered_new_data.csv
+--- Synthetic data generation started at: 20240419_115215
+	Model name: mdl3_ctgan_i_medium_input_ep1
+	Model path: model\mdl3_ctgan_i_medium_input_ep1.pkl
+	Generating 10 rows
+	Batch size: 2
+--- Synthetic data generation started at: 20240419_115435
+	Model name: mdl3_ctgan_i_medium_input_ep1
+	Model path: model\mdl3_ctgan_i_medium_input_ep1.pkl
+	Generating 10 rows
+	Batch size: 2
+	Output file path: output\synthetic_data_n10_b2_mdl3_ctgan_i_medium_input_ep1_20240419_115435.csv
+--- Synthetic data generation started at: 20240419_120611
+	Model name: mdl3_ctgan_i_medium_input_ep1.pkl
+	Model path: model\mdl3_ctgan_i_medium_input_ep1.pkl
+	Generating 10 rows
+	Batch size: 2
+	Output file path: output\synthetic_data_n10_b2_mdl3_ctgan_i_medium_input_ep1_20240419_120611.csv

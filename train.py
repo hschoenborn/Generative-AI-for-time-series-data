@@ -2,6 +2,9 @@ import argparse
 import datetime
 import os
 
+import pandas as pd
+import plotly.graph_objects as go
+
 from sdv.single_table import CTGANSynthesizer
 from sdv.datasets.local import load_csvs
 from sdv.metadata import SingleTableMetadata
@@ -10,7 +13,7 @@ from sdv.metadata import SingleTableMetadata
 current_timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
 # Create argument parser
-parser = argparse.ArgumentParser(description='Generate synthetic data and save it to a CSV file')
+parser = argparse.ArgumentParser(description='Train a CTGAN model synthesizer and save it to a .pkl file')
 
 # Add arguments
 # Files have to be in /file folder
@@ -133,3 +136,28 @@ losses = synthesizer.get_loss_values()
 model_log_file_name = f'losses_{model_name}_{current_timestamp}.csv'
 model_log_file_path = os.path.join(log_folder, model_log_file_name)
 losses.to_csv(model_log_file_path, index=False)
+
+# --- 4. Plot loss function for hyperparameter tuning
+loss_values = pd.read_csv(model_log_file_path)
+
+# Plot loss function of generator and discriminator
+fig = go.Figure(data=[go.Scatter(x=loss_values['Epoch'], y=loss_values['Generator Loss'], name='Generator Loss'),
+                      go.Scatter(x=loss_values['Epoch'], y=loss_values['Discriminator Loss'], name='Discriminator Loss')])
+
+# Update the layout
+fig.update_layout(template='plotly_white',
+                  legend_orientation="h",
+                  legend=dict(x=0, y=1.1))
+
+# Plot
+title = 'CTGAN loss function: '
+fig.update_layout(title=title, xaxis_title='Epoch', yaxis_title='Loss')
+fig.show()
+
+# Create evaluation folder if it does not exist
+evaluation_folder = 'evaluation'
+os.makedirs(evaluation_folder, exist_ok=True)
+
+# Save plot (also saved by evaluate.ipynb)
+plot_html_file_path = os.path.join(evaluation_folder, f'plot_{model_log_file_name}.html')
+fig.write_html(plot_html_file_path)
